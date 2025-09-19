@@ -12,6 +12,14 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <nav>
+        <ul>
+            <li><a href="{{ path('home') }}">Accueil</a></li>
+            <li><a href="{{ path('burger_liste') }}">Liste des burgers</a></li>
+        </ul>
+    </nav>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
     </body>
 </html>

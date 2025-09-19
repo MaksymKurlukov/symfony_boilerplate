@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails du burger - CRUDcroustillant{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Détails du burger</h1>
+        <p><strong>ID :</strong> {{ burger.id }}</p>
+        <p><strong>Nom :</strong> {{ burger.name }}</p>
+        <p><strong>Description :</strong> {{ burger.description }}</p>
+        <a href="{{ path('burger_liste') }}">Retour à la liste des burgers</a>
+    </div>
+{% endblock %}
