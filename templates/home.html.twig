@@ -1,25 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Accueil - CRUDcroustillant</title>
-    <style>
-        header { background-color: #f8f9fa; padding: 10px; text-align: center; }
-        nav ul { list-style-type: none; padding: 0; }
-        nav ul li { display: inline; margin-right: 10px; }
-        footer { background-color: #f8f9fa; padding: 10px; text-align: center; margin-top: 20px; }
-        main { padding: 20px; }
-    </style>
-</head>
-<body>
-    {% include '_header.html.twig' %}
+{% extends 'base.html.twig' %}
 
-    <main>
-        <h2>Bienvenue sur CRUDcroustillant !</h2>
-        <p>Découvrez nos délicieux burgers inspirés de Bob l'Éponge.</p>
-        <img src="{{ asset('assets/images/burger.jpg') }}" alt="Burger délicieux" style="max-width: 300px;">
-    </main>
+{% block title %}Accueil - CRUDcroustillant{% endblock %}
 
-    {% include '_footer.html.twig' %}
-</body>
-</html>
+{% block content %}
+    <h2>Bienvenue sur CRUDcroustillant !</h2>
+    <p>Découvrez nos délicieux burgers inspirés de Bob l'Éponge.</p>
+    <img src="{{ asset('assets/images/burger.jpg') }}" alt="Burger délicieux" style="max-width: 300px;">
+{% endblock %}

@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}CRUDcroustillant{% endblock %}</title>
+    <style>
+        header { background-color: #f8f9fa; padding: 10px; text-align: center; }
+        nav ul { list-style-type: none; padding: 0; }
+        nav ul li { display: inline; margin-right: 10px; }
+        footer { background-color: #f8f9fa; padding: 10px; text-align: center; margin-top: 20px; }
+        main { padding: 20px; }
+    </style>
+</head>
+<body>
+    {% include '_header.html.twig' %}
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        <nav>
-        <ul>
-            <li><a href="{{ path('home') }}">Accueil</a></li>
-            <li><a href="{{ path('burger_liste') }}">Liste des burgers</a></li>
-        </ul>
-    </nav>
-    <div>
+    <main>
         {% block content %}{% endblock %}
-    </div>
-    </body>
+    </main>
+
+    {% include '_footer.html.twig' %}
+</body>
 </html>

@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Liste des Burgers - CRUDcroustillant</title>
-    <style>
-        header { background-color: #f8f9fa; padding: 10px; text-align: center; }
-        nav ul { list-style-type: none; padding: 0; }
-        nav ul li { display: inline; margin-right: 10px; }
-        footer { background-color: #f8f9fa; padding: 10px; text-align: center; margin-top: 20px; }
-        main { padding: 20px; }
-    </style>
-</head>
-<body>
-    {% include '_header.html.twig' %}
+{% extends 'base.html.twig' %}
 
-    <main>
-        <h2>Liste des burgers</h2>
-        <p>Nos burgers sont préparés avec soin et passion.</p>
-    </main>
+{% block title %}Liste des Burgers - CRUDcroustillant{% endblock %}
 
-    {% include '_footer.html.twig' %}
-</body>
-</html>
+{% block content %}
+    <h2>Liste des burgers</h2>
+    <p>Nos burgers sont préparés avec soin et passion.</p>
+{% endblock %}
