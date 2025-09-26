@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Top {{ limit }} Burgers - CRUDcroustillant{% endblock %}
+
+{% block content %}
+    <h2>Top {{ limit }} burgers les plus chers</h2>
+    <ul>
+        {% for burger in burgers %}
+            <li>{{ burger.name }} - {{ burger.price }} €</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
